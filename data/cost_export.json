@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "type": "expense",
+    "amount": "$125.00",
+    "date": "2025-01-01",
+    "description": "Office Supplies"
+  },
+  {
+    "id": 2,
+    "type": "expense",
+    "amount": "$50.00",
+    "date": "2025-01-02",
+    "description": "Gas"
+  },
+  {
+    "id": 3,
+    "type": "sale",
+    "amount": "$500.00",
+    "date": "2025-01-03",
+    "description": "Sale of Goods"
+  }
+]
