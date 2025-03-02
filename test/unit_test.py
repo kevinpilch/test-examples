@@ -2,7 +2,7 @@ from src.main import read_file, load_json, filter_costs, calculate_total_cost, i
 
 def test_read_file():
     """Test reading file contents"""
-    path = 'data/cost_export.json'
+    path = 'test/data/cost_export.json'
     file_contents = read_file(path)
     assert isinstance(file_contents, str)
     assert len(file_contents) > 0
@@ -34,6 +34,6 @@ def test_calculate_total_cost():
 
 def test_improved_get_costs_from_file():
     """Test the improved get costs from file function"""
-    path = 'data/cost_export.json'
+    path = 'test/data/cost_export.json'
     total_cost = improved_get_costs_from_file(path)
     assert total_cost == 0.00  # No 'cost' type in the provided data

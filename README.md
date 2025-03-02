@@ -63,3 +63,52 @@ To run the pipeline in your own GitHub repository, you need to:
 - Push the code to the `main` branch of your repository
 - Create a new branch locally and create some changes
 - Push the new branch to your GitHub repository and open a pull request
+
+## Integration Testing with MinIO
+
+This project includes integration tests that verify S3 functionality using MinIO as a local S3-compatible storage.
+
+### Prerequisites for Integration Tests
+- Docker and Docker Compose installed
+- Python packages: minio, boto3 (included in requirements.txt)
+
+### Running Integration Tests
+
+1. Start the MinIO server:
+```sh
+docker-compose up -d
+```
+
+2. Run the integration tests:
+```sh
+pytest test/integration_test.py
+```
+
+3. Stop MinIO after testing:
+```sh
+docker-compose down
+```
+
+### S3 Integration Features
+
+The project demonstrates:
+- Reading files from S3 buckets
+- Processing cost data
+- Writing results back to S3
+- Integration testing with MinIO
+- Proper S3 client configuration
+- Error handling and cleanup in tests
+
+## Project Structure Updates
+
+```
+.
+├── src/
+│   └── main.py          # Main application code with S3 integration
+├── test/
+│   ├── unit_test.py     # Unit tests
+│   └── integration_test.py # S3 integration tests
+├── docker-compose.yml   # MinIO container configuration
+├── requirements.txt     # Project dependencies
+└── README.md           # Project documentation
+```
